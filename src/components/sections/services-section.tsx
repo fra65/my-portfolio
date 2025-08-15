@@ -47,7 +47,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-24 relative overflow-hidden">
       <div className="absolute inset-0 gradient-mesh opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">

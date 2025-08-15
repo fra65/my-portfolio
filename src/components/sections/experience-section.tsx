@@ -65,7 +65,7 @@ function TimelineItem({
   grade?: string
 }) {
   return (
-    <div className="relative pl-12 pb-12 last:pb-0 group">
+    <div className=" relative pl-12 pb-12 last:pb-0 group">
       <div className="absolute left-6 top-12 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent"></div>
 
       <div className="absolute left-4 top-4 w-5 h-5 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300"></div>
@@ -111,7 +111,7 @@ function TimelineItem({
 
 export function ExperienceEducationSection() {
   return (
-    <section id="experience" className="py-24 relative overflow-hidden">
+    <section id="experience" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-24 relative overflow-hidden">
       <div className="absolute inset-0 gradient-mesh opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">

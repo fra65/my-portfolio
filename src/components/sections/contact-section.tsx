@@ -51,7 +51,7 @@ const socialLinks = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">Contattami</h2>

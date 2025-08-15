@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="w-full sm:px-2 md:px-6 lg:px-[10rem] min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 gradient-mesh"></div>
       <div className="absolute inset-0 bg-background/80"></div>
 

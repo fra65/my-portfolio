@@ -18,7 +18,7 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">Chi sono</h2>

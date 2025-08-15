@@ -11,14 +11,14 @@ import { SkillsSection } from "@/components/sections/skills-section";
 
 export default function Home() {
   return (
-    <main className="w-full px-[10rem] min-h-screen">
+    <main className="min-h-screen" suppressHydrationWarning>
       <HeroSection />
       <SkillsSection />
       <ExperienceEducationSection />
       <ServicesSection />
       <PortfolioSection />
       <AboutSection />
-      <ContactSection />
+      <ContactSection/>
     </main>
   )
 }

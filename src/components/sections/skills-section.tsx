@@ -56,7 +56,7 @@ function CircularProgress({ value, size = 120 }: { value: number; size?: number 
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-muted/30">
+    <section id="skills" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">Le mie competenze</h2>

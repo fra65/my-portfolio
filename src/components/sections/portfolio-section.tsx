@@ -53,7 +53,7 @@ const projects = [
 
 export function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-20 relative overflow-hidden">
+    <section id="portfolio" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/10 to-background"></div>
 
       <div className="container mx-auto px-6 relative z-10">
