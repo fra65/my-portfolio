@@ -1,0 +1,9 @@
+{
+  "Navbar": {
+    "downloadCV": "Download CV"
+  },
+  "HeroSection": {
+    "title": "Hello, my name is",
+    "subtitle": "I'm a Jr Fullstack Developer!"
+  }
+}

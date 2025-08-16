@@ -5,49 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react"
+import { Send } from "lucide-react"
+import { contactInfo } from "@/types/contact/contactInfo"
+import { socialLinks } from "@/types/contact/socialLinks"
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "marco@example.com",
-    href: "mailto:marco@example.com",
-  },
-  {
-    icon: Phone,
-    label: "Telefono",
-    value: "+39 123 456 7890",
-    href: "tel:+39123456789",
-  },
-  {
-    icon: MapPin,
-    label: "Posizione",
-    value: "Milano, Italia",
-    href: "#",
-  },
-]
-
-const socialLinks = [
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "#",
-    color: "hover:text-blue-600",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "#",
-    color: "hover:text-gray-800",
-  },
-  {
-    icon: Twitter,
-    label: "Twitter",
-    href: "#",
-    color: "hover:text-blue-400",
-  },
-]
 
 export function ContactSection() {
   return (

@@ -1,5 +1,4 @@
-import { Footer } from "@/components/layout/footer";
-import { Navbar } from "@/components/layout/header";
+
 import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { ExperienceEducationSection } from "@/components/sections/experience-section";
@@ -8,8 +7,7 @@ import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 
-
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="min-h-screen" suppressHydrationWarning>
       <HeroSection />
@@ -20,5 +18,5 @@ export default function Home() {
       <AboutSection />
       <ContactSection/>
     </main>
-  )
+  );
 }

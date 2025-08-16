@@ -1,0 +1,9 @@
+{
+  "Navbar": {
+    "downloadCV": "Scarica il CV"
+  },
+  "HeroSection": {
+    "title": "Ciao, mi chiamo",
+    "subtitle": "Sono un Jr Fullstack Developer!"
+  }
+}

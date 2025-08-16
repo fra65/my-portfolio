@@ -1,20 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Coffee, Heart, Code2, Gamepad2 } from "lucide-react"
+import { stats } from "@/types/about/stats"
+import { interests } from "@/types/about/interest"
 
-const interests = [
-  { icon: Code2, label: "Coding", color: "text-blue-500" },
-  { icon: Coffee, label: "Coffee", color: "text-amber-500" },
-  { icon: Heart, label: "Design", color: "text-red-500" },
-  { icon: Gamepad2, label: "Gaming", color: "text-green-500" },
-]
-
-const stats = [
-  { number: "50+", label: "Progetti Completati" },
-  { number: "3+", label: "Anni di Esperienza" },
-  { number: "20+", label: "Clienti Soddisfatti" },
-  { number: "100%", label: "Dedizione" },
-]
 
 export function AboutSection() {
   return (

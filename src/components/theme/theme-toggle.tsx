@@ -9,6 +9,13 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
+  const changeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light")
+    // Dentro la funzione che cambia tema
+    window.dispatchEvent(new Event("theme-change"));
+
+  }
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -25,7 +32,7 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="sm"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={changeTheme}
       className="p-2 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
     >
       {theme === "light" ? (

@@ -1,28 +1,14 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 
-const hardSkills = [
-  { name: "React/Next.js", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "Python", level: 80 },
-  { name: "PostgreSQL", level: 85 },
-  { name: "MongoDB", level: 75 },
-  { name: "AWS/Vercel", level: 80 },
-  { name: "Docker", level: 70 },
-]
-
-const softSkills = [
-  { name: "Problem Solving", level: 95 },
-  { name: "Team Work", level: 90 },
-  { name: "Communication", level: 85 },
-  { name: "Leadership", level: 80 },
-]
+// Import nuovi array
+import { hardSkills } from "@/types/skills/hardSkills";
+import { softSkills } from "@/types/skills/softSkills";
 
 function CircularProgress({ value, size = 120 }: { value: number; size?: number }) {
-  const radius = (size - 8) / 2
-  const circumference = radius * 2 * Math.PI
-  const strokeDasharray = `${(value / 100) * circumference} ${circumference}`
+  const radius = (size - 8) / 2;
+  const circumference = radius * 2 * Math.PI;
+  const strokeDasharray = `${(value / 100) * circumference} ${circumference}`;
 
   return (
     <div className="relative" style={{ width: size, height: size }}>
@@ -51,7 +37,7 @@ function CircularProgress({ value, size = 120 }: { value: number; size?: number 
         <span className="text-2xl font-bold text-foreground">{value}%</span>
       </div>
     </div>
-  )
+  );
 }
 
 export function SkillsSection() {
@@ -73,7 +59,7 @@ export function SkillsSection() {
               <CardTitle className="text-2xl text-center">Competenze Tecniche</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {hardSkills.map((skill, index) => (
+              {hardSkills.map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-foreground">{skill.name}</span>
@@ -92,7 +78,7 @@ export function SkillsSection() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-8 justify-items-center">
-                {softSkills.map((skill, index) => (
+                {softSkills.map((skill) => (
                   <div key={skill.name} className="text-center space-y-3">
                     <CircularProgress value={skill.level} />
                     <p className="font-medium text-foreground">{skill.name}</p>
@@ -104,5 +90,5 @@ export function SkillsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

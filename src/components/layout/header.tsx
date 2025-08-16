@@ -4,7 +4,9 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Download, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { ThemeToggle } from "../theme-toggle"
+import { ThemeToggle } from "../theme/theme-toggle"
+import { LanguageToggle } from "../lang/LanguageToggle"
+import { useTranslations } from "next-intl"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -21,10 +23,13 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const t = useTranslations("Navbar")
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-      // Find currently active section by checking element positions
+
+      // Trova sezione attiva
       const sections = navItems
         .map((item) => {
           const el = document.getElementById(item.href.substring(1))
@@ -34,7 +39,6 @@ export function Navbar() {
         })
         .filter(Boolean) as { id: string; top: number }[]
 
-      // Consider active the last section with top <= 150px from viewport top
       let current = "home"
       for (const section of sections) {
         if (section.top <= 150) current = section.id
@@ -45,7 +49,7 @@ export function Navbar() {
     }
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // run on mount to set correctly
+    handleScroll()
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [activeSection])
@@ -63,7 +67,7 @@ export function Navbar() {
       {/* Desktop Navbar */}
       <nav
         className={cn(
-          "fixed top-2 left-1/2 z-50 -translate-x-1/2 rounded-3xl px-6 py-3 items-center space-x-4 transition-all duration-500 hidden lg:flex",
+          "fixed top-2 left-1/2 z-50 -translate-x-1/2 rounded-full px-6 py-3 items-center space-x-4 transition-all duration-500 hidden lg:flex",
           isScrolled ? "glass-strong backdrop-blur-lg shadow-lg" : "bg-transparent shadow-none",
         )}
       >
@@ -90,13 +94,16 @@ export function Navbar() {
         <Button
           variant="outline"
           size="sm"
-          className="btn-modern rounded-full border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 hover:scale-110 hover:shadow-xl text-foreground whitespace-nowrap"
+          className="btn-modern rounded-full border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 hover:scale-110 hover:shadow-xl text-foreground whitespace-nowrap cursor-pointer"
         >
           <Download className="w-4 h-4 mr-2" />
-          Download CV
+          {t("downloadCV")}
+
         </Button>
 
+        {/* Toggles */}
         <ThemeToggle />
+        <LanguageToggle />
       </nav>
 
       {/* Mobile Navbar */}
@@ -114,6 +121,7 @@ export function Navbar() {
 
         <div className="flex items-center space-x-2">
           <ThemeToggle />
+          <LanguageToggle />
           <Button
             variant="ghost"
             size="sm"
@@ -129,7 +137,10 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
 
           {/* Menu content */}
           <div className="absolute top-20 left-2 right-2 glass-strong backdrop-blur-lg rounded-3xl p-6 shadow-2xl">
@@ -155,10 +166,10 @@ export function Navbar() {
 
               <Button
                 variant="outline"
-                className="btn-modern rounded-2xl border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 text-foreground mt-4"
+                className="btn-modern rounded-2xl border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 text-foreground mt-4 cursor-pointer"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download CV
+                {t("downloadCV")}
               </Button>
             </div>
           </div>

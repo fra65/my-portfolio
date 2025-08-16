@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Download } from "lucide-react"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 
 export function HeroSection() {
+
+  const t = useTranslations('HeroSection')
+
   return (
     <section id="home" className="w-full sm:px-2 md:px-6 lg:px-[10rem] min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 gradient-mesh"></div>
@@ -14,11 +18,11 @@ export function HeroSection() {
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Ciao, sono{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Marco</span>
+                {t("title")}{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Fancesco</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-muted-foreground font-light">
-                Full Stack Developer & UI/UX Designer
+                {t("subtitle")}
               </h2>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 Creo esperienze digitali moderne e funzionali che combinano design elegante e tecnologie
