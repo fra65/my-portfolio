@@ -1,9 +1,168 @@
 {
   "Navbar": {
+    "Home": "Home",
+    "Skills": "Skills",
+    "Experience": "Experience",
+    "Services": "Services",
+    "Portfolio": "Portfolio",
+    "About": "About",
+    "Contact": "Contact",
     "downloadCV": "Download CV"
   },
   "HeroSection": {
     "title": "Hello, my name is",
-    "subtitle": "I'm a Jr Fullstack Developer!"
+    "subtitle": "I'm a Jr Fullstack Developer!",
+    "desc": "Student and developer with a mission: learn, experiment, create!",
+    "projects": "Find out my projects",
+    "contact": "Get In Touch"
+  },
+  "SkillsSection": {
+    "title": "My Skills",
+    "subtitle": "A mix of technical and soft skills that allow me to work on various projects of different difficulties, alone or with a work team",
+    "hsTitle": "Hard Skills",
+    "ssTitle": "Soft Skills"
+  },
+  "ExperienceEducationSection": {
+    "title": "Experience & Education",
+    "subtitle": "The path that is training me as a developer",
+    "expTitle": "Experience",
+    "eduTitle": "Education",
+    "experiences": [
+      {
+        "position": "Developer Intern",
+        "company": "Alesca Informatica",
+        "period": "05/2025 - 07/2025",
+        "location": "Milan, Italy",
+        "achievements": [
+          "Maintenance of PHP management system",
+          "Development of demo webapp 'Habits Tracker'"
+        ]
+      },
+      {
+        "position": "Developer Intern",
+        "company": "Timeware Srl",
+        "period": "06/2023 - 06/2023",
+        "location": "Assago, Milan, Italy",
+        "achievements": [
+          "Learning MySQL",
+          "Development of demo webapp 'Pomodoro Timer'"
+        ]
+      },
+      {
+        "position": "Developer Intern",
+        "company": "Timeware Srl",
+        "period": "06/2022 - 06/2022",
+        "location": "Assago, Milan, Italy",
+        "achievements": [
+          "Learning fundamentals of Angular App",
+          "Fundamentals of Typescript"
+        ]
+      }
+    ],
+    "educations": [
+      {
+        "degree": "Bachelor's Degree in Computer Engineering",
+        "institution": "Mercatorum Telematic University",
+        "period": "2025 - Ongoing",
+        "location": "Rome, IT",
+        "grade": "Pending",
+        "achievements": [
+          "Thesis on Machine Learning and Web Development",
+          "Final project: E-commerce platform with React"
+        ]
+      },
+      {
+        "degree": "Fullstack Developer Diploma",
+        "institution": "ITS Tech Talent Factory",
+        "period": "2024 - Ongoing",
+        "location": "Milan, IT",
+        "grade": "Pending",
+        "achievements": [
+          "Thesis on Machine Learning and Web Development",
+          "Final project: E-commerce platform with React"
+        ]
+      },
+      {
+        "degree": "IT Technical Diploma",
+        "institution": "I.I.S Evangelista Torricelli",
+        "period": "2019 - 2024",
+        "location": "Milan, IT",
+        "grade": "90/100",
+        "achievements": [
+          "",
+          "Internship at a software development company"
+        ]
+      }
+    ]
+  },
+  "ServicesSection": {
+    "title": "Services",
+    "subtitle": "Digital solution to transform your ideas"
+  },
+  "PortfolioSection": {
+    "title": "Portfolio",
+    "subtitle": "Selected projects demonstrating technical competence and creativity"
+  },
+  "AboutSection": {
+    "title": "About Me",
+    "subtitle": "Find out more about my history, my passions and what motivates me every day to create innovative digital solutions",
+    "pTitle": "My Story",
+    "p1": "I am a 20-year-old student with a strong passion for computer science and programming, especially in web and application development. After attending a Technical Institute for IT, I chose to further specialize by enrolling in an ITS program as a Fullstack Developer, a path I am pursuing alongside my university studies.",
+    "p2": "In recent years, I have dedicated myself to creating personal and educational projects, experimenting with new technologies and strengthening my skills. I love challenging myself, learning by doing, and growing through interaction with industry professionals and experts.",
+    "p3": "My motivation is simple: to transform curiosity and the desire to learn into solid practical skills."
+  },
+  "ContactSection": {
+    "title": "Get in touch",
+    "subtitle": "Do you have a project in mind? Let's talk about it! I'm always interested in new challenges and opportunities for collaboration.",
+    "Info": {
+      "title": "Contact information",
+      "phone": "Phone",
+      "email": "Email",
+      "place": "Location",
+      "placeContent": "Milan, Italy"
+    },
+    "Social": {
+      "title": "Follow me on Social"
+    },
+    "ContactBlock": {
+      "title": "Ready to start?",
+      "subtitle": "Let's transform your idea into digital reality together!",
+      "cta": "Start Now"
+    },
+    "Form": {
+      "title": "Send a message",
+      "nameLabel": "First Name",
+      "namePlaceholder": "Your first name",
+      "surnameLabel": "Last Name",
+      "surnamePlaceholder": "Your last name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email",
+      "objectLabel": "Subject",
+      "objectPlaceholder": "What would you like to talk about?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "cta": "Send message",
+      "disclaimer": "I will reply within 24 hours. Your data is safe and will not be shared."
+    }
+  },
+  "Footer": {
+    "brandTitle": "Francesco Villani",
+    "brandDesc": "Student and developer with a mission: learn, experiment, create!",
+    "quickLinksTitle": "Quick Links",
+    "servicesTitle": "Services",
+     "services": {
+      "web": "Web Development",
+      "mobile": "Mobile App",
+      "design": "UI/UX Design",
+      "consulting": "Tech Consulting"
+    },
+    "contactTitle": "Contact",
+    "email": "me.francesco.villani@gmail.com",
+    "phone": "+39 327 717 9141",
+    "place": "Milan, Italy",
+    "scrollTop": "Back to top",
+    "copyright": "© 2025 • Francesco Villani. All rights reserved.",
+    "madeWith": "Made with",
+    "using": "using Next.js and shadcn/ui"
   }
 }

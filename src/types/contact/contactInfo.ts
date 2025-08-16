@@ -5,19 +5,25 @@ export const contactInfo: ContactProps[] = [
   {
     icon: Mail,
     label: "Email",
-    value: "marco@example.com",
-    href: "mailto:marco@example.com",
+    value: "me.francesco.villani@gmail.com",
+    href: "mailto:me.francesco.villani@gmail.com",
+    key: "email",
+    translateValue: false
   },
   {
     icon: Phone,
     label: "Telefono",
-    value: "+39 123 456 7890",
-    href: "tel:+39123456789",
+    value: "+39 327 717 9141",
+    href: "tel:+393277179141",
+    key: "phone",
+    translateValue: false
   },
   {
     icon: MapPin,
     label: "Posizione",
-    value: "Milano, Italia",
+    value: "placeContent",
     href: "#",
+    key: "place",
+    translateValue: true
   },
 ]

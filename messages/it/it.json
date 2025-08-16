@@ -1,9 +1,168 @@
 {
   "Navbar": {
+    "Home": "Home",
+    "Skills": "Competenze",
+    "Experience": "Esperienza",
+    "Services": "Servizi",
+    "Portfolio": "Portfolio",
+    "About": "Chi Sono",
+    "Contact": "Contattami",
     "downloadCV": "Scarica il CV"
   },
   "HeroSection": {
     "title": "Ciao, mi chiamo",
-    "subtitle": "Sono un Jr Fullstack Developer!"
+    "subtitle": "Sono un Jr Fullstack Developer!",
+    "desc": "Studente e sviluppatore con una missione: imparare, sperimentare, creare!",
+    "projects": "Scopri i miei progetti",
+    "contact": "Contattami"
+  },
+  "SkillsSection": {
+    "title": "Le mie Skills",
+    "subtitle": "Un mix di competenze tecniche e attitudinali che mi consentono di lavorare su vary progetti di diversa difficoltà, da solo o con un team di lavoro",
+    "hsTitle": "Competenze Tecniche",
+    "ssTitle": "Competenze Attitudinali"
+  },
+  "ExperienceEducationSection": {
+    "title": "Esperienza & Formazione",
+    "subtitle": "Il percorso che mi sta formando come sviluppatore",
+    "expTitle": "Esperienza",
+    "eduTitle": "Formazione",
+    "experiences": [
+      {
+        "position": "Stagista Sviluppatore",
+        "company": "Alesca Informatica",
+        "period": "05/2025 - 07/2025",
+        "location": "Milano - IT",
+        "achievements": [
+          "Manutenzione gestionale in PHP",
+          "Sviluppo demo webapp 'Habits Tracker'"
+        ]
+      },
+      {
+        "position": "Stagista Sviluppatore",
+        "company": "Timeware Srl",
+        "period": "06/2023 - 06/2023",
+        "location": "Assago, Milano - IT",
+        "achievements": [
+          "Apprendimento MySQL",
+          "Sviluppo demo webapp 'Pomodoro Timer'"
+        ]
+      },
+      {
+        "position": "Stagista Sviluppatore",
+        "company": "Timeware Srl",
+        "period": "06/2022 - 06/2022",
+        "location": "Assago, Milano - IT",
+        "achievements": [
+          "Apprendimento fondamentali di Angular App",
+          "Fondamentali di Typescript"
+        ]
+      }
+    ],
+    "educations": [
+      {
+        "degree": "Laurea Triennale in Ingegneria Informatica",
+        "institution": "Università Telematica Mercatorum",
+        "period": "2025 - In Corso",
+        "location": "Roma, IT",
+        "grade": "In sospeso",
+        "achievements": [
+          "Tesi su Machine Learning e Web Development",
+          "Progetto finale: E-commerce platform con React"
+        ]
+      },
+      {
+        "degree": "Diploma di Fullstack Developer",
+        "institution": "ITS Tech Talent Factory",
+        "period": "2024 - In Corso",
+        "location": "Milano, IT",
+        "grade": "In sospeso",
+        "achievements": [
+          "Tesi su Machine Learning e Web Development",
+          "Progetto finale: E-commerce platform con React"
+        ]
+      },
+      {
+        "degree": "Diploma di Perito Informatico",
+        "institution": "I.I.S Evangelista Torricelli",
+        "period": "2019 - 2024",
+        "location": "Milano, IT",
+        "grade": "90/100",
+        "achievements": [
+          "",
+          "Stage presso azienda di software development"
+        ]
+      }
+    ]
+  },
+  "ServicesSection": {
+    "title": "Servizi",
+    "subtitle": "Soluzioni digitali per trasformare le tue idee"
+  },
+  "PortfolioSection": {
+    "title": "Portfolio",
+    "subtitle": "Progetti selezionati che dimostrano competenza tecnica e creatività"
+  },
+  "AboutSection": {
+    "title": "Chi Sono",
+    "subtitle": "Scopri di più sulla mia storia, le mie passioni e cosa mi motiva ogni giorno a creare soluzioni digitali innovative",
+    "pTitle": "La mia Storia",
+    "p1": "Sono uno studente di 20 anni con una forte passione per l'informatica e la programmazione, in particolare nello sviluppo di siti web e applicazioni. Dopo aver frequentato un Istituto Tecnico Informatico, ho scelto di specializzarmi ulteriormente iscrivendomi a un ITS come Fullstack Developer, percorso che sto portando avanti parallelamente agli studi universitari.",
+    "p2": "Negli ultimi anni mi sono dedicato alla creazione di progetti personali e didattici, sperimentando nuove tecnologie e consolidando le mie competenze. Amo mettermi alla prova, imparare facendo e crescere attraverso il confronto con professionisti ed esperti del settore.",
+    "p3": "La mia motivazione è semplice: trasformare la curiosità e la voglia di imparare in solide competenze pratiche."
+  },
+  "ContactSection": {
+    "title": "Contattami",
+    "subtitle": "Hai un progetto in mente? Parliamone! Sono sempre interessato a nuove sfide e opportunità di collaborazione",
+    "Info": {
+      "title": "Informazioni di contatto",
+      "phone": "Telefono",
+      "email": "Email",
+      "place": "Posizione",
+      "placeContent": "Milano, Italia"
+    },
+    "Social": {
+      "title": "Seguimi sui social"
+    },
+    "ContactBlock": {
+      "title": "Pronto per iniziare?",
+      "subtitle": "Trasformiamo insieme la tua idea in realtà digitale!",
+      "cta": "Inizia Ora"
+    },
+    "Form": {
+      "title": "Invia un messaggio",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "surnameLabel": "Cognome",
+      "surnamePlaceholder": "Il tuo cognome",
+      "emailLabel": "Email",
+      "emailPlaceholder": "La tua email",
+      "objectLabel": "Oggetto",
+      "objectPlaceholder": "Di cosa vuoi parlare?",
+      "messageLabel": "Messaggio",
+      "messagePlaceholder": "Raccontami il tuo progetto...",
+      "cta": "Invia messaggio",
+      "disclaimer": "Ti risponderò entro 24 ore. I tuoi dati sono al sicuro e non verranno condivisi."
+    }
+  },
+  "Footer": {
+    "brandTitle": "Francesco Villani",
+    "brandDesc": "Studente e sviluppatore con una missione: imparare, sperimentare, creare!",
+    "quickLinksTitle": "Link Rapidi",
+    "servicesTitle": "Servizi",
+    "services": {
+      "web": "Sviluppo Web",
+      "mobile": "App Mobile",
+      "design": "UI/UX Design",
+      "consulting": "Consulenza Tech"
+    },
+    "contactTitle": "Contatti",
+    "email": "me.francesco.villani@gmail.com",
+    "phone": "+39 327 717 9141",
+    "place": "Milano, Italia",
+    "scrollTop": "Torna su",
+    "copyright": "© 2025 • Francesco Villani. Tutti i diritti riservati.",
+    "madeWith": "Fatto con",
+    "using": "usando Next.js e shadcn/ui"
   }
 }

@@ -3,20 +3,24 @@
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { ArrowUp, Heart } from "lucide-react"
+import { useTranslations } from "next-intl"
+
 
 const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Skills", href: "#skills" },
-  { name: "Esperienza", href: "#experience" },
-  { name: "Servizi", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "About", href: "#about" },
-  { name: "Contatti", href: "#contact" },
+  { name: "Navbar.Home", href: "#home" },
+  { name: "Navbar.Skills", href: "#skills" },
+  { name: "Navbar.Experience", href: "#experience" },
+  { name: "Navbar.Services", href: "#services" },
+  { name: "Navbar.Portfolio", href: "#portfolio" },
+  { name: "Navbar.About", href: "#about" },
+  { name: "Navbar.Contact", href: "#contact" }
 ]
 
-const services = ["Sviluppo Web", "App Mobile", "UI/UX Design", "Consulenza Tech"]
+const serviceKeys = ["web", "mobile", "design", "consulting"];
 
 export function Footer() {
+  const t = useTranslations()
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -27,16 +31,15 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Marco</h3>
+            <h3 className="text-2xl font-bold text-primary">{t("Footer.brandTitle")}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Full Stack Developer appassionato di tecnologie moderne e design elegante. Trasformo idee in soluzioni
-              digitali innovative.
+              {t("Footer.brandDesc")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Link Rapidi</h4>
+            <h4 className="font-semibold text-foreground">{t("Footer.quickLinksTitle")}</h4>
             <nav className="space-y-2">
               {quickLinks.map((link, index) => (
                 <a
@@ -44,7 +47,7 @@ export function Footer() {
                   href={link.href}
                   className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {link.name}
+                  {t(link.name)}
                 </a>
               ))}
             </nav>
@@ -52,11 +55,11 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Servizi</h4>
+            <h4 className="font-semibold text-foreground">{t("Footer.servicesTitle")}</h4>
             <nav className="space-y-2">
-              {services.map((service, index) => (
-                <div key={index} className="block text-sm text-muted-foreground">
-                  {service}
+              {serviceKeys.map((key) => (
+                <div key={key} className="block text-sm text-muted-foreground">
+                  {t(`Footer.services.${key}`)}
                 </div>
               ))}
             </nav>
@@ -64,15 +67,15 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Contatti</h4>
+            <h4 className="font-semibold text-foreground">{t("Footer.contactTitle")}</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>marco@example.com</p>
-              <p>+39 123 456 7890</p>
-              <p>Milano, Italia</p>
+              <p>{t("Footer.email")}</p>
+              <p>{t("Footer.phone")}</p>
+              <p>{t("Footer.place")}</p>
             </div>
             <Button onClick={scrollToTop} variant="outline" size="sm" className="w-full bg-transparent">
               <ArrowUp className="mr-2 h-4 w-4" />
-              Torna su
+              {t("Footer.scrollTop")}
             </Button>
           </div>
         </div>
@@ -80,10 +83,10 @@ export function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© 2024 Marco. Tutti i diritti riservati.</p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Fatto con <Heart className="w-4 h-4 text-red-500" /> usando Next.js e shadcn/ui
-          </p>
+          <p className="text-sm text-muted-foreground">{t("Footer.copyright")}</p>
+          {/* <p className="text-sm text-muted-foreground flex items-center gap-1">
+            {t("Footer.madeWith")} <Heart className="w-4 h-4 text-red-500" /> {t("Footer.using")}
+          </p> */}
         </div>
       </div>
     </footer>

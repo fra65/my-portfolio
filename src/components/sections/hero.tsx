@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight, Download, Mail, Phone } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import Link from "next/link"
 
 export function HeroSection() {
 
@@ -19,33 +20,38 @@ export function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 {t("title")}{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Fancesco</span>
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Fancesco Villani</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-muted-foreground font-light">
                 {t("subtitle")}
               </h2>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Creo esperienze digitali moderne e funzionali che combinano design elegante e tecnologie
-                all&apos;avanguardia per trasformare le tue idee in realtà.
+                {t("desc")}
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="group bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-full"
-              >
-                Scopri i miei progetti
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="group glass-card hover:glass-strong rounded-full hover:scale-105 transition-all duration-300 bg-transparent"
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Scarica CV
-              </Button>
+              <Link href='#portfolio'>
+                <Button
+                  size="lg"
+                  className="group bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
+                >
+                  {t("projects")}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+
+              <Link href='#contact'>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group glass-card hover:glass-strong rounded-full hover:scale-105 transition-all duration-300 bg-transparent cursor-pointer"
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  {t("contact")}
+                </Button>
+              </Link>
+              
             </div>
           </div>
 

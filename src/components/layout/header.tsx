@@ -8,22 +8,26 @@ import { ThemeToggle } from "../theme/theme-toggle"
 import { LanguageToggle } from "../lang/LanguageToggle"
 import { useTranslations } from "next-intl"
 
-const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
-]
+
 
 export function Navbar() {
+
+  const t = useTranslations("Navbar")
+
+  const navItems = [
+    { name: t("Home"), href: "#home" },
+    { name: t("Skills"), href: "#skills" },
+    { name: t("Experience"), href: "#experience" },
+    { name: t("Services"), href: "#services" },
+    { name: t("Portfolio"), href: "#portfolio" },
+    { name: t("About"), href: "#about" },
+    { name: t("Contact"), href: "#contact" },
+  ]
+
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const t = useTranslations("Navbar")
 
   useEffect(() => {
     const handleScroll = () => {

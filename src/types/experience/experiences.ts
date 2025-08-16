@@ -2,27 +2,24 @@ import { ExperienceProps } from "./experienceProps";
 
 export const experiences: ExperienceProps[] = [
   {
-    position: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    period: "2022 - Presente",
-    location: "Milano, IT",
-    achievements: [
-      "Sviluppo di applicazioni React/Next.js per oltre 50k utenti",
-      "Implementazione di architetture microservizi con Node.js",
-    ],
+    position: "Stagista Sviluppatore",
+    company: "Alesca Informatica",
+    period: "05/2025 - 07/2025",
+    location: "Milano - IT",
+    achievements: ["Manutenzione gestionale in PHP", "Sviluppo demo webapp 'Habits Tracker'"],
   },
   {
-    position: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2020 - 2022",
-    location: "Roma, IT",
-    achievements: ["Creazione di 20+ siti web responsive e performanti", "Ottimizzazione SEO e Core Web Vitals"],
+    position: "Stagista Sviluppatore",
+    company: "Timeware Srl",
+    period: "06/2023 - 06/2023",
+    location: "Assago, Milano - IT",
+    achievements: ["Apprendimento MySQL", "Sviluppo demo webapp 'Pomodoro Timer'"],
   },
   {
-    position: "Junior Developer",
-    company: "StartupLab",
-    period: "2019 - 2020",
-    location: "Firenze, IT",
-    achievements: ["Sviluppo di MVP per startup innovative", "Collaborazione in team agile con metodologie Scrum"],
+    position: "Stagista Sviluppatore",
+    company: "Timeware Srl",
+    period: "06/2022 - 06/2022",
+    location: "Assago, Milano - IT",
+    achievements: ["Apprendimento fondamentali di Angular App", "Fondamentali di Typescript"],
   },
 ]

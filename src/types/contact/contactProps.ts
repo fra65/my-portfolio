@@ -6,4 +6,6 @@ export interface ContactProps{
     label: string,
     value: string,
     href: string,
+    key: string,
+    translateValue: boolean
 }

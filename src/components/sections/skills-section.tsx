@@ -4,6 +4,7 @@ import { Progress } from "@/components/ui/progress";
 // Import nuovi array
 import { hardSkills } from "@/types/skills/hardSkills";
 import { softSkills } from "@/types/skills/softSkills";
+import { useTranslations } from "next-intl";
 
 function CircularProgress({ value, size = 120 }: { value: number; size?: number }) {
   const radius = (size - 8) / 2;
@@ -41,14 +42,16 @@ function CircularProgress({ value, size = 120 }: { value: number; size?: number 
 }
 
 export function SkillsSection() {
+
+  const t = useTranslations("SkillsSection")
+
   return (
     <section id="skills" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Le mie competenze</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Una combinazione di competenze tecniche e soft skills che mi permettono di creare soluzioni complete e
-            innovative.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -56,7 +59,7 @@ export function SkillsSection() {
           {/* Hard Skills */}
           <Card className="animate-slide-in-left">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Competenze Tecniche</CardTitle>
+              <CardTitle className="text-2xl text-center">{t("hsTitle")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {hardSkills.map((skill) => (
@@ -74,7 +77,7 @@ export function SkillsSection() {
           {/* Soft Skills */}
           <Card className="animate-slide-in-right">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Soft Skills</CardTitle>
+              <CardTitle className="text-2xl text-center">{t("ssTitle")}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-8 justify-items-center">

@@ -1,16 +1,20 @@
 import { services } from "@/types/services/services"
+import { useTranslations } from "next-intl"
 
 
 export function ServicesSection() {
+
+  const t = useTranslations("ServicesSection")
+
   return (
     <section id="services" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-24 relative overflow-hidden">
       <div className="absolute inset-0 gradient-mesh opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Servizi</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Soluzioni digitali per trasformare le tue idee
+            {t("subtitle")}
           </p>
         </div>
 

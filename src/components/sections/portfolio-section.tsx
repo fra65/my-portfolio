@@ -1,16 +1,20 @@
 import { projects } from "@/types/portfolio/projects"
 import { ExternalLink, Github } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function PortfolioSection() {
+
+  const t = useTranslations("PortfolioSection")
+
   return (
     <section id="portfolio" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/10 to-background"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl font-semibold text-foreground mb-3">Portfolio</h2>
+          <h2 className="text-3xl font-semibold text-foreground mb-3">{t("title")}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Progetti selezionati che dimostrano competenza tecnica e creatività
+            {t("subtitle")}
           </p>
         </div>
 
