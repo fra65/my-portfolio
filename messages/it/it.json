@@ -97,7 +97,26 @@
   },
   "ServicesSection": {
     "title": "Servizi",
-    "subtitle": "Soluzioni digitali per trasformare le tue idee"
+    "subtitle": "Soluzioni digitali per trasformare le tue idee",
+    "services": [
+      {
+        "title": "Sito vetrina/portfolio",
+        "description": "Sviluppo di un sito statico per mostrare al mondo te o la tua azienda"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Progettazione di Interfacce intuitive, accattivanti e professionali"
+      },
+      {
+        "title": "Sviluppo SaaS",
+        "description": "Servizio ad hoc per aiutare i processi produttivi tuoi o della tua azienda"
+      },
+      {
+        "title": "Sistemazione CV",
+        "description": "Rendo il tuo CV più professionale ed efficiente"
+      }
+    ],
+    "knowMore": "Scopri di più"
   },
   "PortfolioSection": {
     "title": "Portfolio",

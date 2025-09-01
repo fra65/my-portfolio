@@ -97,7 +97,26 @@
   },
   "ServicesSection": {
     "title": "Services",
-    "subtitle": "Digital solution to transform your ideas"
+    "subtitle": "Digital solution to transform your ideas",
+    "services": [
+    {
+      "title": "Showcase/Portfolio Website",
+      "description": "Development of a static site to showcase you or your company to the world"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Design of intuitive, engaging, and professional interfaces"
+    },
+    {
+      "title": "SaaS Development",
+      "description": "Custom service to help your or your company's production processes"
+    },
+    {
+      "title": "Resume Improvement",
+      "description": "Make your resume more professional and effective"
+    }
+  ],
+  "knowMore": "Discover"
   },
   "PortfolioSection": {
     "title": "Portfolio",

@@ -1,18 +1,22 @@
-import { services } from "@/types/services/services"
-import { useTranslations } from "next-intl"
-
+import { services } from "@/types/services/services";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function ServicesSection() {
-
-  const t = useTranslations("ServicesSection")
+  const t = useTranslations("ServicesSection");
 
   return (
-    <section id="services" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-24 relative overflow-hidden">
+    <section
+      id="services"
+      className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-24 relative overflow-hidden"
+    >
       <div className="absolute inset-0 gradient-mesh opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            {t("title")}
+          </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
             {t("subtitle")}
           </p>
@@ -20,7 +24,7 @@ export function ServicesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon
+            const Icon = service.icon;
             return (
               <div
                 key={index}
@@ -40,7 +44,7 @@ export function ServicesSection() {
                 )}
 
                 <div className="space-y-6">
-                  {/* Icon più grande e moderno */}
+                  {/* Icona grande */}
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 ${
                       service.featured
@@ -51,10 +55,14 @@ export function ServicesSection() {
                     <Icon className="w-8 h-8" />
                   </div>
 
-                  {/* Content più pulito */}
+                  {/* Contenuto con testi tradotti */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-foreground leading-tight">{service.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                      {t(`services.${index}.title`)}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {t(`services.${index}.description`)}
+                    </p>
 
                     <div className="flex flex-wrap gap-2">
                       {service.technologies.map((tech, techIndex) => (
@@ -68,18 +76,22 @@ export function ServicesSection() {
                     </div>
 
                     <div className="pt-2">
-                      <button className="text-primary hover:text-accent font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 inline-flex items-center gap-2">
-                        Scopri di più
-                        <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                      </button>
+                      <Link href="#contact">
+                        <button className="text-primary hover:text-accent font-semibold text-sm group-hover:translate-x-1 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer">
+                          {t("knowMore")}
+                          <span className="group-hover:translate-x-1 transition-transform duration-300">
+                            →
+                          </span>
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

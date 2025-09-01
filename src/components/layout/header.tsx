@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { ThemeToggle } from "../theme/theme-toggle"
 import { LanguageToggle } from "../lang/LanguageToggle"
 import { useTranslations } from "next-intl"
+import Link from "next/link"
 
 
 
@@ -15,7 +16,6 @@ export function Navbar() {
   const t = useTranslations("Navbar")
 
   const navItems = [
-    { name: t("Home"), href: "#home" },
     { name: t("Skills"), href: "#skills" },
     { name: t("Experience"), href: "#experience" },
     { name: t("Services"), href: "#services" },
@@ -71,10 +71,38 @@ export function Navbar() {
       {/* Desktop Navbar */}
       <nav
         className={cn(
-          "fixed top-2 left-1/2 z-50 -translate-x-1/2 rounded-full px-6 py-3 items-center space-x-4 transition-all duration-500 hidden lg:flex",
+          "fixed top-2 left-1/2 z-50 -translate-x-1/2 rounded-full px-10 py-4 items-center space-x-6 transition-all duration-500 hidden lg:flex",
           isScrolled ? "glass-strong backdrop-blur-lg shadow-lg" : "bg-transparent shadow-none",
         )}
       >
+        {/* Nome e Cognome come link alla HeroSection */}
+        <a
+          href="#home"
+          onClick={e => {
+            e.preventDefault();
+            scrollToSection("#home");
+          }}
+          className="flex flex-col items-center justify-center mr-4 cursor-pointer select-none px-4 py-2"
+          style={{ textDecoration: "none" }}
+        >
+          <span
+            className={cn(
+              "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
+              isScrolled ? "text-lg" : "text-2xl"
+            )}
+          >
+            Francesco
+          </span>
+          <span
+            className={cn(
+              "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
+              isScrolled ? "text-lg" : "text-2xl"
+            )}
+          >
+            Villani
+          </span>
+        </a>
+
         {navItems.map((item) => (
           <a
             key={item.name}
@@ -95,15 +123,14 @@ export function Navbar() {
           </a>
         ))}
 
-        <Button
-          variant="outline"
-          size="sm"
-          className="btn-modern rounded-full border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 hover:scale-110 hover:shadow-xl text-foreground whitespace-nowrap cursor-pointer"
+        <a
+          href="/cv/CV_Villani.pdf"
+          download="CV_Villani.pdf"
+          className="btn-modern rounded-full border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 hover:scale-110 hover:shadow-xl text-foreground whitespace-nowrap cursor-pointer flex items-center px-4 py-2"
         >
           <Download className="w-4 h-4 mr-2" />
           {t("downloadCV")}
-
-        </Button>
+        </a>
 
         {/* Toggles */}
         <ThemeToggle />
@@ -118,9 +145,33 @@ export function Navbar() {
         )}
       >
         <div className="flex items-center space-x-2">
-          <span className="font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Portfolio
-          </span>
+          {/* Nome e Cognome come link alla HeroSection */}
+          <Link
+            href="#home"
+            onClick={e => {
+              e.preventDefault();
+              scrollToSection("#home");
+            }}
+            className="flex flex-col items-center justify-center cursor-pointer select-none px-4 py-0"
+            style={{ textDecoration: "none" }}
+          >
+            <span
+              className={cn(
+                "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
+                isScrolled ? "text-lg" : "text-lg"
+              )}
+            >
+              Francesco
+            </span>
+            <span
+              className={cn(
+                "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
+                isScrolled ? "text-lg" : "text-lg"
+              )}
+            >
+              Villani
+            </span>
+          </Link>
         </div>
 
         <div className="flex items-center space-x-2">
@@ -148,6 +199,10 @@ export function Navbar() {
 
           {/* Menu content */}
           <div className="absolute top-20 left-2 right-2 glass-strong backdrop-blur-lg rounded-3xl p-6 shadow-2xl">
+
+            {/* <div>
+            </div> */}
+
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
@@ -167,6 +222,9 @@ export function Navbar() {
                   {item.name}
                 </a>
               ))}
+
+              <img src="/next.svg" alt="LOGO" className="w-10 h-10" />
+
 
               <Button
                 variant="outline"
