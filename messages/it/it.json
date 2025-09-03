@@ -149,7 +149,9 @@
       "cta": "Inizia Ora"
     },
     "Form": {
-      "title": "Invia un messaggio",
+  "title": "Invia un messaggio",
+  "success": "Messaggio inviato con successo!",
+  "error": "Si è verificato un errore durante l'invio del messaggio. Riprova.",
       "nameLabel": "Nome",
       "namePlaceholder": "Il tuo nome",
       "surnameLabel": "Cognome",
@@ -161,6 +163,7 @@
       "messageLabel": "Messaggio",
       "messagePlaceholder": "Raccontami il tuo progetto...",
       "cta": "Invia messaggio",
+      "loadingCta": "Invio...",
       "disclaimer": "Ti risponderò entro 24 ore. I tuoi dati sono al sicuro e non verranno condivisi."
     }
   },

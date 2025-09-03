@@ -10,7 +10,7 @@ export function AboutSection() {
   const t = useTranslations("AboutSection")
 
   return (
-    <section id="about" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-muted/30">
+  <section id="about" className="w-full sm:px-2 md:px-6 lg:px-[10rem] py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
@@ -62,7 +62,7 @@ export function AboutSection() {
                   const Icon = interest.icon
                   return (
                     <Badge key={index} variant="outline" className="px-3 py-2 text-sm">
-                      <Icon className={`w-4 h-4 mr-2 ${interest.color}`} />
+                      <Icon className={`w-4 h-4 mr-2 text-primary`} />
                       {interest.label}
                     </Badge>
                   )

@@ -25,26 +25,31 @@ export function ContactSection() {
     message: "",
   })
 
-  function handleChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
+  const [status, setStatus] = useState<null | { type: "success" | "error"; message: string }>(null)
+  const [loading, setLoading] = useState(false)
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { id, value } = event.target
     setFormData((prev) => ({ ...prev, [id]: value }))
   }
 
   async function handleSubmit(event: React.FormEvent) {
-    event.preventDefault();
+    event.preventDefault()
+    setLoading(true)
+    setStatus(null)
 
     const data = {
       nome: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       messaggio: `Oggetto: ${formData.subject}\nMessaggio: ${formData.message}`,
-    };
+    }
 
     try {
-      const response = await sendEmail(data);
-
-      alert(response.message || "Messaggio inviato con successo!");
+      const response = await sendEmail(data)
+      setStatus({
+        type: "success",
+        message: t("Form.success") || response.message || "Messaggio inviato con successo!"
+      })
 
       setFormData({
         firstName: "",
@@ -52,13 +57,16 @@ export function ContactSection() {
         email: "",
         subject: "",
         message: "",
-      });
+      })
     } catch (error: any) {
-      console.error(error);
-      alert(error.message || "Errore durante l'invio del messaggio");
+      setStatus({
+        type: "error",
+        message: t("Form.error") || error.message || "Errore durante l'invio del messaggio"
+      })
+    } finally {
+      setLoading(false)
     }
   }
-
 
   return (
     <section
@@ -68,18 +76,15 @@ export function ContactSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("subtitle")}
-          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("subtitle")}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+          {/* Contact Info and Social Links */}
           <div className="space-y-8 animate-slide-in-left">
+            {/* Contact Info */}
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                {t("Info.title")}
-              </h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">{t("Info.title")}</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon
@@ -105,9 +110,7 @@ export function ContactSection() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">
-                {t("Social.title")}
-              </h4>
+              <h4 className="text-lg font-semibold text-foreground mb-4">{t("Social.title")}</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon
@@ -125,12 +128,10 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* CTA */}
+            {/* Call to Action */}
             <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
               <CardContent className="p-6">
-                <h4 className="text-lg font-semibold text-foreground mb-2">
-                  {t("ContactBlock.title")}
-                </h4>
+                <h4 className="text-lg font-semibold text-foreground mb-2">{t("ContactBlock.title")}</h4>
                 <p className="text-muted-foreground mb-4">{t("ContactBlock.subtitle")}</p>
                 <Link href="mailto:me.francesco.villani@gmail.com">
                   <Button className="w-full cursor-pointer">
@@ -149,6 +150,8 @@ export function ContactSection() {
                 <CardTitle className="text-2xl">{t("Form.title")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
+
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">{t("Form.nameLabel")}</Label>
@@ -160,6 +163,7 @@ export function ContactSection() {
                       required
                     />
                   </div>
+
                   <div className="space-y-2">
                     <Label htmlFor="lastName">{t("Form.surnameLabel")}</Label>
                     <Input
@@ -207,9 +211,22 @@ export function ContactSection() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full" size="lg">
+                {status && (
+                  <div
+                    className={`text-center text-sm mb-4 px-4 py-2 rounded-md border ${
+                      status.type === "success"
+                        ? "bg-green-50 border-green-300 text-green-800"
+                        : "bg-red-50 border-red-300 text-red-800"
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+
+                )}
+
+                <Button type="submit" className="w-full" size="lg" disabled={loading}>
                   <Send className="mr-2 h-4 w-4" />
-                  {t("Form.cta")}
+                  {loading ? t("Form.loadingCta") : t("Form.cta")}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">{t("Form.disclaimer")}</p>

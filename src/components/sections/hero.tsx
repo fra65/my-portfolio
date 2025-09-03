@@ -34,7 +34,7 @@ export function HeroSection() {
               <Link href='#portfolio'>
                 <Button
                   size="lg"
-                  className="group bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
+                  className="group bg-gradient-to-r from-primary to-accent hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-full cursor-pointer text-primary-foreground"
                 >
                   {t("projects")}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -64,7 +64,7 @@ export function HeroSection() {
               {/* Profile Image */}
               <div className="relative w-80 h-80 rounded-full overflow-hidden glass-strong shadow-2xl hover:scale-105 transition-all duration-500">
                 <Image
-                  src="/images/myface.jpg"
+                  src="/images/myface_no-bg.png"
                   alt="Marco"
                   width={320}
                   height={320}

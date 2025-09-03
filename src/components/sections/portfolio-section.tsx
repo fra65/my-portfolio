@@ -61,7 +61,7 @@ export function PortfolioSection() {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 bg-opacity-90 backdrop-blur-sm text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/90 backdrop-blur-sm text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
                       >
                         <ExternalLink className="w-4 h-4" />
                         <span>Demo</span>
@@ -72,7 +72,7 @@ export function PortfolioSection() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black bg-opacity-90 backdrop-blur-sm text-white text-sm font-medium hover:bg-neutral-800 transition-colors"
+                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-foreground/90 backdrop-blur-sm text-background text-sm font-medium hover:bg-muted transition-colors"
                       >
                         <Github className="w-4 h-4" />
                         <span>Code</span>
@@ -108,7 +108,7 @@ export function PortfolioSection() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 bg-opacity-90 backdrop-blur-sm text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/90 backdrop-blur-sm text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>Demo</span>
@@ -119,7 +119,7 @@ export function PortfolioSection() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black bg-opacity-90 backdrop-blur-sm text-white text-sm font-medium hover:bg-neutral-800 transition-colors"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-foreground/90 backdrop-blur-sm text-background text-sm font-medium hover:bg-muted transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       <span>Code</span>

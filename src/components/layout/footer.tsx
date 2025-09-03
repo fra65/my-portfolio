@@ -26,7 +26,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-card border-t">
+  <footer className="bg-card border-t">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -80,13 +80,10 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+  <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">{t("Footer.copyright")}</p>
-          {/* <p className="text-sm text-muted-foreground flex items-center gap-1">
-            {t("Footer.madeWith")} <Heart className="w-4 h-4 text-red-500" /> {t("Footer.using")}
-          </p> */}
         </div>
       </div>
     </footer>

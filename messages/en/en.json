@@ -149,7 +149,9 @@
       "cta": "Start Now"
     },
     "Form": {
-      "title": "Send a message",
+  "title": "Send a message",
+  "success": "Message sent successfully!",
+  "error": "An error occurred while sending the message. Please try again.",
       "nameLabel": "First Name",
       "namePlaceholder": "Your first name",
       "surnameLabel": "Last Name",
@@ -161,6 +163,7 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell me about your project...",
       "cta": "Send message",
+      "loadingCta": "Sending...",
       "disclaimer": "I will reply within 24 hours. Your data is safe and will not be shared."
     }
   },

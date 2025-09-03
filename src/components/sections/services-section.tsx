@@ -37,7 +37,7 @@ export function ServicesSection() {
               >
                 {service.featured && (
                   <div className="absolute -top-3 left-6">
-                    <div className="bg-gradient-to-r from-primary to-accent text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg">
+                    <div className="bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs font-semibold px-4 py-2 rounded-full shadow-lg">
                       Featured
                     </div>
                   </div>
@@ -48,8 +48,8 @@ export function ServicesSection() {
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 ${
                       service.featured
-                        ? "bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/25"
-                        : "glass-card group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/25"
+                        ? "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg shadow-primary/25"
+                        : "glass-card group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground group-hover:shadow-lg group-hover:shadow-primary/25"
                     }`}
                   >
                     <Icon className="w-8 h-8" />

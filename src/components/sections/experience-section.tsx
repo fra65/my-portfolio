@@ -23,7 +23,7 @@ export function ExperienceEducationSection() {
           <div className="animate-slide-in-left">
             <div className="flex items-center gap-3 mb-12">
               <div className="w-10 h-10 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center">
-                <Briefcase className="w-5 h-5 text-white" />
+                <Briefcase className="w-5 h-5 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">{t("expTitle")}</h3>
             </div>
@@ -46,8 +46,8 @@ export function ExperienceEducationSection() {
           {/* Education */}
           <div className="animate-slide-in-right">
             <div className="flex items-center gap-3 mb-12">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                <GraduationCap className="w-5 h-5 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">{t("eduTitle")}</h3>
             </div>
