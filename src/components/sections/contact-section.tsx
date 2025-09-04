@@ -224,7 +224,7 @@ export function ContactSection() {
 
                 )}
 
-                <Button type="submit" className="w-full" size="lg" disabled={loading}>
+                <Button type="submit" className="w-full cursor-pointer" size="lg" disabled={loading}>
                   <Send className="mr-2 h-4 w-4" />
                   {loading ? t("Form.loadingCta") : t("Form.cta")}
                 </Button>
