@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl"
 import { Briefcase, GraduationCap } from "lucide-react"
 import TimelineItem from "../experience-education/TimelineItem"
 import { educations } from "@/types/education/educations"
-import EducationItem from "../experience-education/EducationItem"
 
 export function ExperienceEducationSection() {
   const t = useTranslations("ExperienceEducationSection")

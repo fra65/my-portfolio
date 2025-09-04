@@ -2,6 +2,7 @@ import { projects } from "@/types/portfolio/projects"
 import { ExternalLink, Github } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import Image from "next/image"
 
 export function PortfolioSection() {
   const t = useTranslations("PortfolioSection")
@@ -31,7 +32,7 @@ export function PortfolioSection() {
               {/* Immagine progetto */}
               <div className="relative overflow-hidden">
                 <div className="aspect-video relative">
-                  <img
+                  <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -1,8 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { stats } from "@/types/about/stats"
 import { interests } from "@/types/about/interest"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 
 
 export function AboutSection() {
@@ -29,7 +28,14 @@ export function AboutSection() {
 
               {/* Profile Image */}
               <div className="relative w-80 h-96 rounded-2xl overflow-hidden border-4 border-card shadow-2xl">
-                <img src="/developer-at-desk.png" alt="Marco al lavoro" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/myface_no-bg.png"
+                  alt="Marco"
+                  width={320}
+                  height={320}
+                  className="w-full h-full rounded-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
