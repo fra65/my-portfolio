@@ -32,11 +32,15 @@ export function PortfolioSection() {
               {/* Immagine progetto */}
               <div className="relative overflow-hidden">
                 <div className="aspect-video relative">
+                  
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
+                    width={800}
+                    height={450}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
 
                   {/* Featured label */}

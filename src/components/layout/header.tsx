@@ -9,10 +9,7 @@ import { LanguageToggle } from "../lang/LanguageToggle"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 
-
-
 export function Navbar() {
-
   const t = useTranslations("Navbar")
 
   const navItems = [
@@ -28,12 +25,10 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 
-      // Trova sezione attiva
       const sections = navItems
         .map((item) => {
           const el = document.getElementById(item.href.substring(1))
@@ -54,9 +49,8 @@ export function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
     handleScroll()
-
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [activeSection])
+  }, [activeSection, navItems])
 
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1))
@@ -75,7 +69,6 @@ export function Navbar() {
           isScrolled ? "glass-strong backdrop-blur-lg shadow-lg" : "bg-transparent shadow-none",
         )}
       >
-        {/* Nome e Cognome come link alla HeroSection */}
         <a
           href="#home"
           onClick={e => {
@@ -145,7 +138,6 @@ export function Navbar() {
         )}
       >
         <div className="flex items-center space-x-2">
-          {/* Nome e Cognome come link alla HeroSection */}
           <Link
             href="#home"
             onClick={e => {
@@ -158,7 +150,7 @@ export function Navbar() {
             <span
               className={cn(
                 "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
-                isScrolled ? "text-lg" : "text-lg"
+                "text-lg"
               )}
             >
               Francesco
@@ -166,14 +158,13 @@ export function Navbar() {
             <span
               className={cn(
                 "font-extrabold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-wide transition-all duration-300",
-                isScrolled ? "text-lg" : "text-lg"
+                "text-lg"
               )}
             >
               Villani
             </span>
           </Link>
         </div>
-
         <div className="flex items-center space-x-2">
           <ThemeToggle />
           <LanguageToggle />
@@ -182,6 +173,7 @@ export function Navbar() {
             size="sm"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 rounded-full hover:bg-white/10"
+            aria-label={isMobileMenuOpen ? "Chiudi menu mobile" : "Apri menu mobile"}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
@@ -189,54 +181,61 @@ export function Navbar() {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-
-          {/* Menu content */}
-          <div className="absolute top-20 left-2 right-2 glass-strong backdrop-blur-lg rounded-3xl p-6 shadow-2xl">
-
-            {/* <div>
-            </div> */}
-
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection(item.href)
-                  }}
-                  className={cn(
-                    "px-4 py-3 text-base font-medium rounded-2xl cursor-pointer transition-all duration-300 text-center",
-                    activeSection === item.href.substring(1)
-                      ? "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg"
-                      : "text-muted-foreground hover:text-foreground hover:bg-white/10",
-                  )}
-                >
-                  {item.name}
-                </a>
-              ))}
-
-              <img src="/next.svg" alt="LOGO" className="w-10 h-10" />
-
-
-              <Button
-                variant="outline"
-                className="btn-modern rounded-2xl border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 text-foreground mt-4 cursor-pointer"
+      <div
+        className={cn(
+          "fixed left-0 right-0 z-40 lg:hidden pointer-events-none transition-all",
+          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+        style={{ top: '68px' }} // (top-16 ~ 64px + margin)
+      >
+        <div
+          className={cn(
+            "mx-2 glass-strong backdrop-blur-lg rounded-3xl p-6 shadow-2xl transition-all duration-500 ease-in-out transform",
+            isMobileMenuOpen
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-4 opacity-0 pointer-events-none"
+          )}
+        >
+          <div className="flex flex-col space-y-4">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(item.href)
+                }}
+                className={cn(
+                  "px-4 py-3 text-base font-medium rounded-2xl cursor-pointer transition-all duration-300 text-center",
+                  activeSection === item.href.substring(1)
+                    ? "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg"
+                    : "text-muted-foreground hover:text-foreground hover:bg-white/10",
+                )}
               >
-                <Download className="w-4 h-4 mr-2" />
-                {t("downloadCV")}
-              </Button>
-            </div>
+                {item.name}
+              </a>
+            ))}
+
+            <a
+              href="/cv/CV_Villani.pdf"
+              download="CV_Villani.pdf"
+              className="btn-modern rounded-2xl border-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm hover:from-primary/30 hover:to-accent/30 text-foreground mt-4 cursor-pointer flex items-center justify-center px-4 py-3"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              {t("downloadCV")}
+            </a>
           </div>
         </div>
-      )}
+        {/* Backdrop (mascherato sotto il menu, non scrollabile) */}
+        <div
+          className={cn(
+            "fixed inset-0 bg-black/40 transition-opacity duration-300",
+            isMobileMenuOpen ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none"
+          )}
+          style={{ zIndex: -1 }}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      </div>
 
       <div className="h-16" />
     </>
