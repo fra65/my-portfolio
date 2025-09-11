@@ -33,7 +33,7 @@ export function AboutSection() {
                   alt="Marco"
                   width={320}
                   height={320}
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full object-cover"
                   priority
                 />
               </div>
