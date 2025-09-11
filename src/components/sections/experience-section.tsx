@@ -35,8 +35,10 @@ export function ExperienceEducationSection() {
                   subtitle={t(`experiences.${index}.company`, { defaultValue: exp.company })}
                   period={t(`experiences.${index}.period`, { defaultValue: exp.period })}
                   location={t(`experiences.${index}.location`, { defaultValue: exp.location })}
-                  achievements={exp.achievements}
-                  showAchievements={true} // 👈 mantiene achievements
+                  achievements={exp.achievements.map((_, achIdx) =>
+                    t(`achievements_${index * 2 + achIdx + 1}`, { defaultValue: exp.achievements[achIdx] })
+                  )}
+                  showAchievements={true}
                 />
               ))}
             </div>

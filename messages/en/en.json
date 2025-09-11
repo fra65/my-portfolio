@@ -34,8 +34,8 @@
         "period": "05/2025 - 07/2025",
         "location": "Milan, Italy",
         "achievements": [
-          "Maintenance of PHP management system",
-          "Development of demo webapp 'Habits Tracker'"
+          "ExperienceEducationSection.achievements_1",
+          "ExperienceEducationSection.achievements_2"
         ]
       },
       {
@@ -44,8 +44,8 @@
         "period": "06/2023 - 06/2023",
         "location": "Assago, Milan, Italy",
         "achievements": [
-          "Learning MySQL",
-          "Development of demo webapp 'Pomodoro Timer'"
+          "ExperienceEducationSection.achievements_3",
+          "ExperienceEducationSection.achievements_4"
         ]
       },
       {
@@ -54,11 +54,17 @@
         "period": "06/2022 - 06/2022",
         "location": "Assago, Milan, Italy",
         "achievements": [
-          "Learning fundamentals of Angular App",
-          "Fundamentals of Typescript"
+          "ExperienceEducationSection.achievements_5",
+          "ExperienceEducationSection.achievements_6"
         ]
       }
     ],
+    "achievements_1": "Maintenance of PHP management system",
+    "achievements_2": "Development of demo webapp 'Habits Tracker'",
+    "achievements_3": "Learning MySQL",
+    "achievements_4": "Development of demo webapp 'Pomodoro Timer'",
+    "achievements_5": "Learning fundamentals of Angular App",
+    "achievements_6": "Fundamentals of Typescript",
     "educations": [
       {
         "degree": "Bachelor's Degree in Computer Engineering",
@@ -120,7 +126,39 @@
   },
   "PortfolioSection": {
     "title": "Portfolio",
-    "subtitle": "Selected projects demonstrating technical competence and creativity"
+    "subtitle": "Selected projects demonstrating technical competence and creativity",
+    "getBtn": "Get",
+    "codeBtn": "Code",
+    "demoBtn": "Demo",
+    "allProjectsBtn": "View all projects",
+    "allPurchaseBtn": "Discover what's for sale",
+    "purchasableLabel": "Purchasable",
+    "projects": [
+      {
+        "title": "Portfolio website template for photographers",
+        "description": "A ready-to-use template for freelance photographers to showcase their work. Easy customization and deployment with an integrated step-by-step guide.",
+        "category": "Website Template",
+        "technologies": ["Next.js", "TypeScript", "Figma"]
+      },
+      {
+        "title": "Showcase website for a carpentry business",
+        "description": "A static showcase website to increase online visibility for a small family-run carpentry and window company.",
+        "category": "Showcase/Portfolio Website",
+        "technologies": ["WordPress", "Figma"]
+      },
+      {
+        "title": "Demo Webapp Habits Tracker",
+        "description": "A minimal webapp for local habit management.",
+        "category": "Webapp",
+        "technologies": ["Next.js", "TypeScript", "Prisma", "MySQL"]
+      },
+      {
+        "title": "Showcase website for a small martial arts gym",
+        "description": "A showcase website created for a small Aikido gym. My first fully developed and published project.",
+        "category": "Showcase/Portfolio Website",
+        "technologies": ["WordPress", "Figma"]
+      }
+    ]
   },
   "AboutSection": {
     "title": "About Me",

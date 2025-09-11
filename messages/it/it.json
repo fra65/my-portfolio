@@ -34,8 +34,8 @@
         "period": "05/2025 - 07/2025",
         "location": "Milano - IT",
         "achievements": [
-          "Manutenzione gestionale in PHP",
-          "Sviluppo demo webapp 'Habits Tracker'"
+          "ExperienceEducationSection.achievements_1",
+          "ExperienceEducationSection.achievements_2"
         ]
       },
       {
@@ -44,8 +44,8 @@
         "period": "06/2023 - 06/2023",
         "location": "Assago, Milano - IT",
         "achievements": [
-          "Apprendimento MySQL",
-          "Sviluppo demo webapp 'Pomodoro Timer'"
+          "ExperienceEducationSection.achievements_3",
+          "ExperienceEducationSection.achievements_4"
         ]
       },
       {
@@ -54,11 +54,17 @@
         "period": "06/2022 - 06/2022",
         "location": "Assago, Milano - IT",
         "achievements": [
-          "Apprendimento fondamentali di Angular App",
-          "Fondamentali di Typescript"
+          "ExperienceEducationSection.achievements_5",
+          "ExperienceEducationSection.achievements_6"
         ]
       }
     ],
+    "achievements_1": "Manutenzione gestionale in PHP",
+    "achievements_2": "Sviluppo demo webapp 'Habits Tracker'",
+    "achievements_3": "Apprendimento MySQL",
+    "achievements_4": "Sviluppo demo webapp 'Pomodoro Timer'",
+    "achievements_5": "Apprendimento fondamentali di Angular App",
+    "achievements_6": "Fondamentali di Typescript",
     "educations": [
       {
         "degree": "Laurea Triennale in Ingegneria Informatica",
@@ -120,7 +126,39 @@
   },
   "PortfolioSection": {
     "title": "Portfolio",
-    "subtitle": "Progetti selezionati che dimostrano competenza tecnica e creatività"
+    "subtitle": "Progetti selezionati che dimostrano competenza tecnica e creatività",
+    "getBtn": "Ottieni",
+    "codeBtn": "Codice",
+    "demoBtn": "Demo",
+    "allProjectsBtn": "Vedi tutti i progetti",
+    "allPurchaseBtn": "Scopri cosa c'è in vendita",
+    "purchasableLabel": "Acquistabile",
+    "projects": [
+      {
+        "title": "Template sito portfolio per fotografi",
+        "description": "Template pronto all'uso per fotografi freelance, ideale per mostrare i propri lavori. Personalizzazione e pubblicazione semplici grazie a una guida integrata passo-passo.",
+        "category": "Template sito",
+        "technologies": ["Next.js", "TypeScript", "Figma"]
+      },
+      {
+        "title": "Sito vetrina per ditta di falegnameria",
+        "description": "Sito vetrina statico per aumentare la visibilità online di una piccola ditta familiare di falegnameria e infissi.",
+        "category": "Sito vetrina/portfolio",
+        "technologies": ["WordPress", "Figma"]
+      },
+      {
+        "title": "Demo Webapp Habits Tracker",
+        "description": "Webapp minimale per la gestione locale delle abitudini.",
+        "category": "Webapp",
+        "technologies": ["Next.js", "TypeScript", "Prisma", "MySQL"]
+      },
+      {
+        "title": "Sito vetrina per palestra di arti marziali",
+        "description": "Sito vetrina realizzato per una piccola palestra di Aikido. Primo progetto sviluppato e pubblicato integralmente.",
+        "category": "Sito vetrina/portfolio",
+        "technologies": ["WordPress", "Figma"]
+      }
+    ]
   },
   "AboutSection": {
     "title": "Chi Sono",

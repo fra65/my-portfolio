@@ -4,7 +4,8 @@ export interface ProjectProps {
   image: string
   technologies: string[]
   category: string
-  featured: boolean
+  purchasable: boolean
   demoUrl?: string    // link al sito/demo
   githubUrl?: string  // link al repository
+  storeUrl?: string
 }
